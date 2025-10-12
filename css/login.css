@@ -1,0 +1,8 @@
+body {
+    font-family: 'Dm Sans', sans-serif;
+    /* background-color: #ffffffff; */
+    background-image: url('../img/bg-login.jpg');
+    background-size: cover;         /* biar gambar menutupi seluruh layar */
+    background-position: center;    /* posisi di tengah */
+    background-repeat: no-repeat;   /* jangan diulang */
+  }
