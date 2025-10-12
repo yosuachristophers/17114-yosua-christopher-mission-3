@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Utilities -->
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="icon" type="image/png" href="/img/icon.png">    
+    <title>Chill - Register</title>
+</head>
+<body>
+
+    <!-- Wrapper Center -->
+    <div class="flex content-center items-center h-screen justify-center w-100 p-5">
+        <!-- Container -->
+        <div class="container bg-[rgba(24,26,28,0.84)] p-10 rounded-lg text-white sm:w-1/4 w-full">
+            <!-- Chill Logo -->
+            <div class="flex flex-col justify-center items-center w-100 mb-5">
+                <img src="img/logo.png" alt="logo" class="w-40">
+            </div>
+            <!-- Sub Header -->
+            <div class="flex flex-col w-100 justify-center items-center mb-5">
+                <h1 class="font-bold text-2xl">Masuk</h1>
+                <p class="text-xs">Selamat Datang Kembali!</p>
+            </div>
+
+            <!-- Form -->
+            <div class="container space-y-4">
+                <div class="card">
+                    <h2 class="font-semibold">Username</h2>
+                    <input class="placeholder-opacity-40 placeholder-white h-10 px-4 rounded-3xl border border-white/20 font-normal bg-transparent" style="width: 100%;" type="text" name="username" placeholder="Masukkan username"> 
+                </div>
+
+                <!-- Password -->
+                <div class="card">
+                    <h2 class="font-semibold">Kata Sandi</h2>
+                                        <!-- Password With Show Password Icon -->
+                    <div class="relative w-full">
+                    <input 
+                        id="password" 
+                        type="password" 
+                        name="password" 
+                        placeholder="Masukkan kata sandi"
+                        class="h-10 px-4 pr-10 rounded-3xl border border-white/30 font-normal bg-transparent text-white placeholder-white/50 w-full"
+                    >
+                    <button 
+                        type="button" 
+                        onclick="togglePassword()" 
+                        class="absolute inset-y-0 right-3 flex items-center text-white/70 hover:text-white"
+                    >
+                        <img src="img/show-password.png" alt="logo" class="w-4 mr-2">
+                    </button>
+                    </div>
+                </div>
+
+                <!-- Re-Password -->
+                <div class="card">
+                    <h2 class="font-semibold">Konfirmasi Kata Sandi</h2>
+                    <!-- Password With Show Password Icon -->
+                    <div class="relative w-full">
+                    <input 
+                        id="password" 
+                        type="password" 
+                        name="password" 
+                        placeholder="Masukkan kata sandi"
+                        class="h-10 px-4 pr-10 rounded-3xl border border-white/30 font-normal bg-transparent text-white placeholder-white/50 w-full"
+                    >
+                    <button 
+                        type="button" 
+                        onclick="togglePassword()" 
+                        class="absolute inset-y-0 right-3 flex items-center text-white/70 hover:text-white"
+                    >
+                        <img src="img/show-password.png" alt="logo" class="w-4 mr-2">
+                    </button>
+                    </div>
+                </div>
+
+                <div class="flex w-100 text-sm">
+                    <p>Sudah punya akun? <a href="/login.html"><b>Masuk</b></a></p>
+                </div>
+
+                <!-- Masu -->
+                <div class="flex flex-col text-center space-y-2">
+                    <!-- Submit Button -->
+                    <button class="bg-gray-600 rounded-3xl h-10 px-4" type="submit">Masuk</button>
+                    <p class="text-white/60">Atau</p>
+                    <button class="flex px-4 rounded-3xl border border-white/30 font-normal bg-transparent justify-center h-100 h-10 px-4 items-center" type="submit">
+                        <img src="img/google.png" alt="logo" class="w-4 mr-2">
+                        <h2>Daftar Dengan Google</h2>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

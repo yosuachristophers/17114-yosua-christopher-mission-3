@@ -16,7 +16,7 @@
     <!-- Wrapper Center -->
     <div class="flex content-center items-center h-screen justify-center w-100 p-5">
         <!-- Container -->
-        <div class="container bg-black/60 p-10 rounded-lg text-white sm:w-1/4 w-full">
+        <div class="container bg-[rgba(24,26,28,0.84)] p-10 rounded-lg text-white sm:w-1/4 w-full">
             <!-- Chill Logo -->
             <div class="flex flex-col justify-center items-center w-100 mb-5">
                 <img src="img/logo.png" alt="logo" class="w-40">
@@ -31,21 +31,37 @@
             <div class="container space-y-4">
                 <div class="card">
                     <h2 class="font-semibold">Username</h2>
-                    <input class="h-10 px-4 rounded-3xl border border-white/30 font-normal bg-transparent" style="width: 100%;" type="text" name="username" placeholder="Masukkan Username"> 
+                    <input class="placeholder-opacity-40 placeholder-white h-10 px-4 rounded-3xl border border-white/20 font-normal bg-transparent" style="width: 100%;" type="text" name="username" placeholder="Masukkan username"> 
                 </div>
 
                 <!-- Password -->
                 <div class="card">
                     <h2 class="font-semibold">Kata Sandi</h2>
-                    <input class="h-10 px-4 rounded-3xl border border-white/30 font-normal bg-transparent" style="width: 100%;"  type="password" name="password" placeholder="Masukkan Password"> 
+                    <!-- Password With Show Password Icon -->
+                    <div class="relative w-full">
+                    <input 
+                        id="password" 
+                        type="password" 
+                        name="password" 
+                        placeholder="Masukkan kata sandi"
+                        class="h-10 px-4 pr-10 rounded-3xl border border-white/30 font-normal bg-transparent text-white placeholder-white/50 w-full"
+                    >
+                    <button 
+                        type="button" 
+                        onclick="togglePassword()" 
+                        class="absolute inset-y-0 right-3 flex items-center text-white/70 hover:text-white"
+                    >
+                        <img src="img/show-password.png" alt="logo" class="w-4 mr-2">
+                    </button>
+                    </div>
                 </div>
 
                 <div class="flex w-100 text-sm justify-between">
-                    <p>Belum punya akun? <a href=""><b>Daftar</b></a></p>
+                    <p>Belum punya akun? <a href="/register.html"><b>Daftar</b></a></p>
                     <a class="font-bold">Lupa kata sandi</a>
                 </div>
 
-                <!-- Masu -->
+                <!-- Masuk -->
                 <div class="flex flex-col text-center space-y-2">
                     <!-- Submit Button -->
                     <button class="bg-gray-600 rounded-3xl h-10 px-4" type="submit">Masuk</button>
