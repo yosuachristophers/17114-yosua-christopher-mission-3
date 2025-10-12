@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    /* background-color: #ffffffff; */
+    background-image: url('../img/bg-login.jpg');
+    background-size: cover;         /* biar gambar menutupi seluruh layar */
+    background-position: center;    /* posisi di tengah */
+    background-repeat: no-repeat;   /* jangan diulang */
+  }
