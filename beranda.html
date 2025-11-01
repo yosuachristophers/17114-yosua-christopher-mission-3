@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,33 +9,62 @@
 
     <!-- Utilities -->
     <link rel="stylesheet" href="/css/beranda.css">
-    <link rel="icon" type="image/png" href="/img/icon.png">    
+    <link rel="icon" type="image/png" href="/img/icon.png">
     <title>Chill | Beranda</title>
 </head>
+
 <body>
     <!--  
     |--------------------------------------------------------------------------
     | BERANDA
     |--------------------------------------------------------------------------
     -->
-    <div class="container justify-center item-center mx-auto text-white my-5">
-        <div class="flex justify-between">
+    <div class="container justify-center item-center mx-auto text-white my-3">
+        <div class="flex justify-between p-4">
             <!--  
             |--------------------------------------------------------------------------
             | NAVBAR PANEL
             |--------------------------------------------------------------------------
             -->
-            <div class="flex flex-row space-x-10 items-center">
-                <img src="/img/logo.png" alt="" srcset="" class="w-32 h-10">
-                <a class="font-bold text-xl" href="">Series</a>
-                <a class="font-bold text-xl" href="">Film</a>
-                <a class="font-bold text-xl" href="">Daftar Saya</a>
+            <div class="flex flex-row space-x-4 items-center md:space-x-10">
+                <!-- Logo kecil (muncul di HP) -->
+                <img src="/img/icon.png" alt="" class="block w-5 h-5 md:hidden">
+
+                <!-- Logo besar (muncul di layar md ke atas) -->
+                <img src="/img/logo.png" alt="" class="hidden md:block md:w-32 md:h-10">
+
+                <a class="font-bold text-sm md:text-xl" href="">Series</a>
+                <a class="font-bold text-sm md:text-xl" href="">Film</a>
+                <a class="font-bold text-sm md:text-xl" href="">Daftar Saya</a>
             </div>
-            <div class="flex space-x-3">
-                <img class="rounded-full w-10" src="img/user.png" alt="">    
-                <button><img class="w-6" src="/img/arrow-down.png" alt=""></button>
+            <div class="flex flex-col">
+                <div class="flex flex-row space-x-3">
+                    <img class="rounded-full w-7 md:w-10" src="img/user.png" alt="">
+                    <button><img class="w-5 md:w-6" src="/img/arrow-down.png" alt=""></button>
+                </div>
             </div>
+
+                <div class="flex flex-col absolute right-4 top-20 bg-[#181A1C] z-50 w-[160px] md:hidden p-2 rounded-md space-y-1 float-left">
+                    <!-- Profil Saya -->
+                    <div class="flex flex-row space-x-2">
+                        <img class="w-6" src="/img/blue-user.png" alt="">
+                        <h2>Profil Saya</h2>
+                    </div>
+
+                    <!-- Ubah Premium -->
+                    <div class="flex flex-row space-x-2">
+                        <img class="w-6" src="/img/white-star.png" alt="">
+                        <h2>Ubah Premium</h2>
+                    </div>
+
+                    <!-- Keluar -->
+                    <div class="flex flex-row space-x-2">
+                        <img class="w-6" src="/img/exit.png" alt="">
+                        <h2>Keluar</h2>
+                    </div>
+                </div>
         </div>
+    </div>
     </div>
 
     <!--  
@@ -42,38 +72,46 @@
     | HERO BANNER
     |--------------------------------------------------------------------------
     -->
-    <div class="w-full bg-[url('/img/herro-banner.jpg')] bg-cover bg-center relative h-[587px]">
+    <div class="w-full bg-[url('/img/herro-banner.jpg')] bg-cover bg-center relative h-[350px] md:h-[587px]">
         <!-- Filter Untuk Gradient Hitam -->
-        <div class="absolute inset-0 bg-gradient-to-t from-[rgba(24,26,28,1)] via-[rgba(24,26,28,0.88)] to-[rgba(24,26,28,0)]"></div>
+        <div
+            class="absolute inset-0 bg-gradient-to-t from-[rgba(24,26,28,1)] via-[rgba(24,26,28,0.88)] to-[rgba(24,26,28,0)]">
+        </div>
 
-            <div class="container mx-auto flex items-end h-full z-50 relative pb-20">
-                <div class="flex flex-row text-white">
-                    <div class="container flex-col text-white w-50 space-y-10 w-2/4 border-2 border-white sm:w-full md:w-full">
-                        <h1 class="font-bold text-5xl border-2 border-green-700 sm:text-3xl">Duty After School</h1>
-                        <p class="text-xl border-2 border-blue-700 sm:text-md">Sebuah benda tak dikenal mengambil alih dunia. Dalam keputusasaan, Departemen Pertahanan mulai merekrut lebih banyak tentara, termasuk siswa sekolah menengah. Mereka pun segera menjadi pejuang garis depan dalam perang.</p>
-                        <div class="flex border-2 border-yellow-700">
-                            <button class="bg-blue-600 font-bold py-2 px-4 rounded-2xl flex items-center w-90 mr-4 font-bold text-white">
-                                Mulai
-                            </button>
-                            <button class="bg-gray-700 bg-opacity-70 text-white font-bold py-2 px-4 rounded flex items-center space-x-3 rounded-2xl">
-                                <div class="w-7 border-2 border-white rounded-full flex items-center justify-center">
-                                    <h2 class="text-bold">i</h2>
-                                </div>
-                                <h2>Info Selengkapnya</h2>
-                            </button>
-                            <div class="w-11 border-2 border-white rounded-full flex items-center justify-center ml-4">
-                                <h1>18+</h1>
+        <div class="container mx-auto flex items-end h-full z-50 relative pb-20">
+            <div class="flex flex-row text-white">
+                <div class="container flex-col text-white w-50 w-2/4 w-full space-y-2 md:w-3/4 space-y-[25px] px-4">
+                    <h1 class="font-bold text-4xl md:text-5xl">Duty After School</h1>
+                    <p class="text-sm overflow-x-hidden h-10 md:text-xl md:overflow-x-auto md:h-auto">Sebuah benda tak
+                        dikenal mengambil alih dunia. Dalam keputusasaan, Departemen Pertahanan mulai merekrut lebih
+                        banyak tentara, termasuk siswa sekolah menengah. Mereka pun segera menjadi pejuang garis depan
+                        dalam perang.</p>
+                    <div class="flex border-2 border-red-700">
+                        <button
+                            class="bg-blue-600 text-black font-bold py-2 px-4 rounded-2xl flex items-center w-15 h-9 mr-4 font-bold text-white text-xs justify-center md:w-90">
+                            Mulai
+                        </button>
+                        <button
+                            class="bg-gray-700 bg-opacity-70 text-white font-bold py-2 px-4 h-9 rounded flex items-center space-x-3 rounded-2xl text-xs justify-center">
+                            <div class="w-5 border-2 border-white rounded-full flex items-center justify-center">
+                                <h2 class="text-bold">i</h2>
                             </div>
+                            <h2>Info Selengkapnya</h2>
+                        </button>
+                        <div
+                            class="w-9 border-2 border-white rounded-full flex items-center justify-center ml-4 text-xs">
+                            <h1>18+</h1>
+                        </div>
+                        <div>
+                            class="w-9 border-2 border-white rounded-full flex items-center justify-center ml-4 text-xs">
+                            <h1>18+</h1>
                         </div>
                     </div>
-                    <!--  
-                    |--------------------------------------------------------------------------
-                    | MELANJUTKAN TONTON FILM CARD
-                    |--------------------------------------------------------------------------
-                    -->
-                    <div class="hidden md:block container flex w-2/4 bg-red-700">a</div>
-                </div
+                </div>
+                <!-- Spacer -->
+                <div class="hidden md:block container flex w-1/4"></div>
             </div>
+        </div>
     </div>
 
     <!--  
@@ -81,8 +119,8 @@
     | MELANJUTKAN TONTON FILM CARD
     |--------------------------------------------------------------------------
     -->
-    <div class="container justify-center mx-auto py-10 space-y-8 relative overflow-x-auto overflow-y-hidden">
-        <h1 class="text-3xl font-bold text-white">Melanjutkan Tonton Film</h1>
+    <div class="container justify-center mx-auto py-10 pl-4 space-y-4 relative overflow-x-auto overflow-y-auto">
+        <h1 class="text-2xl font-bold text-white md:text-3xl">Melanjutkan Tonton Film</h1>
 
         <div class="w-full h-[162px] relative">
 
@@ -90,57 +128,84 @@
             <div class="flex flex-row w-full absolute top-[30%]" style="height: 162px;">
                 <div class="flex w-[50%] h-14">
                     <!-- Arrow Left -->
-                    <img class="bg-[#2F3334] float-left border-[#E7E3FC3B] border-2 rounded-full" src="/img//arrow-left.png" alt="">
+                    <img class="bg-[#2F3334] float-left border-[#E7E3FC3B] border-2 rounded-full"
+                        src="/img//arrow-left.png" alt="">
                 </div>
                 <div class="flex w-[50%] h-14 justify-end">
                     <!-- Arrow Right -->
-                    <img class="bg-[#2F3334] border-[#E7E3FC3B] border-2 rounded-full" src="/img/arrow-right.png" alt="">
+                    <img class="bg-[#2F3334] border-[#E7E3FC3B] border-2 rounded-full" src="/img/arrow-right.png"
+                        alt="">
                 </div>
             </div>
 
             <!-- Card Wrapper -->
-            <div class="flex flex-row overflow-x-auto space-x-3">
+            <div class="flex overflow-x-auto space-x-4 w-full">
 
-                
+
                 <!-- Gambar 1 -->
-                <div class="card flex flex-row w-full">
-                    <div class="flex flex-row bg-[url('/img/g1-1.png')] h-[162px] w-full bg-contain bg-no-repeat bg-center justify-between items-end text-white">
-                        <div class="flex flex-row h-20 justify-between items-end text-white w-full bg-gradient-to-t from-[rgba(24,26,28,1)] via-[rgba(24,26,28,0.30)] to-[rgba(24,26,28,0)">
+                <div class="card flex-shrink-0 w-[295px] md:w-1/4">
+                    <div
+                        class="flex flex-row bg-[url('/img/g1-1.png')] h-[165px] bg-contain bg-no-repeat bg-center justify-between items-end text-white rounded-md md:h-[195px]">
+                        <div
+                            class="flex flex-row h-20 justify-between items-end text-white w-full bg-gradient-to-t from-[rgba(24,26,28,1)] via-[rgba(24,26,28,0.30)] to-[rgba(24,26,28,0) md: h-full px-4">
                             <h2 class="z-50 mx-4 font-bold text-md mb-2">Don't Look Up</h2>
-                            <p class="z-50 mx-4 font-bold text-md mb-2">⭐ 4.4 / 5</p>
+                            
+                            <div class="flex flex-row items-center justify-center pb-2">
+                                <img class="w-6 md:w-7" src="/img/white-star.png" alt="">
+                                <p class="z-50 ml-2 font-bold text-md">4.4 / 5</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Gambar 2 -->
-                <div class="card flex flex-row w-full">
-                    <div class="flex flex-row bg-[url('/img/g1-2.png')] h-[162px] w-full bg-contain bg-no-repeat bg-center justify-between items-end text-white">
-                        <div class="flex flex-row h-20  justify-between items-end text-white w-full bg-gradient-to-t from-[rgba(24,26,28,1)] via-[rgba(24,26,28,0.30)] to-[rgba(24,26,28,0)">
-                            <h2 class="z-50 mx-4 font-bold text-md mb-2">All Of Us Dead</h2>
-                            <p class="z-50 mx-4 font-bold text-md mb-2">⭐ 4.6 / 5</p>
+                <div class="card flex-shrink-0 w-[295px] md:w-1/4">
+                    <div
+                        class="flex flex-row bg-[url('/img/g1-2.png')] h-[165px] bg-contain bg-no-repeat bg-center justify-between items-end text-white rounded-md md:h-[195px]">
+                        <div
+                            class="flex flex-row h-20 justify-between items-end text-white w-full bg-gradient-to-t from-[rgba(24,26,28,1)] via-[rgba(24,26,28,0.30)] to-[rgba(24,26,28,0) md: h-full px-4">
+                            <h2 class="z-50 mx-4 font-bold text-md mb-2">All Of Us Are Dead</h2>
+                            
+                            <div class="flex flex-row items-center justify-center pb-2">
+                                <img class="w-6 md:w-7" src="/img/white-star.png" alt="">
+                                <p class="z-50 ml-2 font-bold text-md">4.2 / 5</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Gambar 3 -->
-                <div class="card flex flex-row w-full">
-                    <div class="flex flex-row bg-[url('/img/g1-3.png')] h-[162px] w-full bg-contain bg-no-repeat bg-center justify-between items-end text-white">
-                        <div class="flex flex-row h-20 justify-between items-end text-white w-full bg-gradient-to-t from-[rgba(24,26,28,1)] via-[rgba(24,26,28,0.30)] to-[rgba(24,26,28,0)">
+                <div class="card flex-shrink-0 w-[295px] md:w-1/4">
+                    <div
+                        class="flex flex-row bg-[url('/img/g1-3.png')] h-[165px] bg-contain bg-no-repeat bg-center justify-between items-end text-white rounded-md md:h-[195px]">
+                        <div
+                            class="flex flex-row h-20 justify-between items-end text-white w-full bg-gradient-to-t from-[rgba(24,26,28,1)] via-[rgba(24,26,28,0.30)] to-[rgba(24,26,28,0) md: h-full px-4">
                             <h2 class="z-50 mx-4 font-bold text-md mb-2">Bluelock</h2>
-                            <p class="z-50 mx-4 font-bold text-md mb-2">⭐ 4.5 / 5</p>
+                            
+                            <div class="flex flex-row items-center justify-center pb-2">
+                                <img class="w-6 md:w-7" src="/img/white-star.png" alt="">
+                                <p class="z-50 ml-2 font-bold text-md">4.6 / 5</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Gambar 1 -->
-                <div class="card flex flex-row w-full">
-                    <div class="flex flex-row bg-[url('/img/g1-4.png')] h-[162px] w-full bg-contain bg-no-repeat bg-center justify-between items-end text-white">
-                        <div class="flex flex-row h-20 justify-between items-end text-white w-full bg-gradient-to-t from-[rgba(24,26,28,1)] via-[rgba(24,26,28,0.30)] to-[rgba(24,26,28,0)">
+                <!-- Gambar 4 -->
+                <div class="card flex-shrink-0 w-[295px] md:w-1/4">
+                    <div
+                        class="flex flex-row bg-[url('/img/g1-4.png')] h-[165px] bg-contain bg-no-repeat bg-center justify-between items-end text-white rounded-md md:h-[195px]">
+                        <div
+                            class="flex flex-row h-20 justify-between items-end text-white w-full bg-gradient-to-t from-[rgba(24,26,28,1)] via-[rgba(24,26,28,0.30)] to-[rgba(24,26,28,0) md: h-full px-4">
                             <h2 class="z-50 mx-4 font-bold text-md mb-2">A Man Called Otto</h2>
-                            <p class="z-50 mx-4 font-bold text-md mb-2">⭐ 4.8 / 5</p>
+                            
+                            <div class="flex flex-row items-center justify-center pb-2">
+                                <img class="w-6 md:w-7" src="/img/white-star.png" alt="">
+                                <p class="z-50 ml-2 font-bold text-md">4.4 / 5</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -151,62 +216,75 @@
     | TOP RATING FILM DAN SERIES HARI INI
     |--------------------------------------------------------------------------
     -->
-    <div class="container justify-center mx-auto py-10 space-y-8 relative">
-        <h1 class="text-3xl font-bold text-white">Top Rating Film dan Series Hari ini</h1>
-
-        <div class="w-full h-[365px] relative">
-
+    <div
+        class="container justify-center mx-auto py-10 pl-4 space-y-4 relative overflow-x-auto overflow-y-hidden md:h-[530px]">
+        <h1 class="text-2xl font-bold text-white md:text-3xl">Top Rating Film Dan Series Hari Ini</h1>
+        <div class="w-full h-[162px] relative">
             <!-- JS -->
-            <div class="flex flex-row w-full absolute top-[40%]" style="height: 365px;">
+            <div class="flex flex-row w-full absolute h-[162px] top-[40%] md:top-[110%]">
                 <div class="flex w-[50%] h-14">
                     <!-- Arrow Left -->
-                    <img class="bg-[#2F3334] float-left border-[#E7E3FC3B] border-2 rounded-full" src="/img//arrow-left.png" alt="">
+                    <img class="bg-[#2F3334] float-left border-[#E7E3FC3B] border-2 rounded-full"
+                        src="/img//arrow-left.png" alt="">
                 </div>
                 <div class="flex w-[50%] h-14 justify-end">
                     <!-- Arrow Right -->
-                    <img class="bg-[#2F3334] border-[#E7E3FC3B] border-2 rounded-full" src="/img/arrow-right.png" alt="">
+                    <img class="bg-[#2F3334] border-[#E7E3FC3B] border-2 rounded-full" src="/img/arrow-right.png"
+                        alt="">
                 </div>
             </div>
-
             <!-- Card Wrapper -->
-            <div class="flex flex-row overflow-x-auto space-x-3">
+            <div class="flex overflow-x-auto w-full">
 
-                
-                <div class="card flex flex-row w-full space-x-10">
-                    <!-- Gambar 1 -->
-                    <div class="flex flex-row bg-[url('/img/g2-1.png')] rounded-xl w-1/5 h-[410px] bg-contain bg-no-repeat bg-center text-white">
-                        <div class="flex flex-row h-10 justify-between text-white w-full mt-2 items-center">
-                            <h2 class="z-50 mx-4 font-bold text-md mb-2 bg-blue-900 px-2 pb-1 rounded-xl justify-center">Episode Baru</h2>
+                <div class="flex flex-row space-x-4">
+                    <div class="flex-shrink-0">
+                        <!-- Gambar 1 -->
+                        <div
+                            class="bg-[url('/img/g2-1.png')] h-[175px] w-[118px] md:h-[418px] md:w-[283px] bg-contain bg-no-repeat bg-center text-white rounded-md md:rounded-xl">
+                            <div class="flex flex-row h-10 justify-between text-white w-full mt-2 items-center m">
+                                <h2
+                                    class="z-50 mx-4 mt-4 font-bold text-xs mb-2 bg-blue-900 px-2 py-2 rounded-xl justify-center md:text-md md:py-1">
+                                    Episode Baru</h2>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Gambar 2 -->
-                    <div class="flex flex-row bg-[url('/img/g2-2.png')] rounded-xl w-1/5 h-[410px] bg-contain bg-no-repeat bg-center text-white">
-                        <div class="flex flex-row h-10 justify-between text-white w-full mt-2 items-center">
-                            <h2 class="z-50 mx-4 font-bold text-md mb-2 bg-blue-900 px-2 pb-1 rounded-xl justify-center">Episode Baru</h2>
+                    <div class="flex-shrink-0">
+                        <!-- Gambar 2 -->
+                        <div
+                            class="bg-[url('/img/g2-2.png')] h-[175px] w-[118px] md:h-[418px] md:w-[283px] bg-contain bg-no-repeat bg-center text-white rounded-md md:rounded-xl">
+
                         </div>
                     </div>
 
-                    <!-- Gambar 3 -->
-                    <div class="flex flex-row bg-[url('/img/g2-3.png')] rounded-xl w-1/5 h-[410px] bg-contain bg-no-repeat bg-center text-white">
-                        <div class="flex flex-row h-10 justify-between text-white w-full mt-2 items-center">
-                            <h2 class="z-50 mx-4 font-bold text-md mb-2 bg-blue-900 px-2 pb-1 rounded-xl justify-center">Episode Baru</h2>
+                    <div class="flex-shrink-0">
+                        <!-- Gambar 3 -->
+                        <div
+                            class="bg-[url('/img/g2-3.png')] h-[175px] w-[118px] md:h-[418px] md:w-[283px] bg-contain bg-no-repeat bg-center text-white rounded-md md:rounded-xl">
+
                         </div>
                     </div>
 
-                    <!-- Gambar 4 -->
-                    <div class="flex flex-row bg-[url('/img/g2-4.png')] rounded-xl w-1/5 h-[410px] bg-contain bg-no-repeat bg-center text-white">
-                        <div class="flex flex-row h-10 justify-between text-white w-full mt-2 items-center">
-                            <h2 class="z-50 mx-4 font-bold text-md mb-2 bg-blue-900 px-2 pb-1 rounded-xl justify-center">Episode Baru</h2>
+                    <div class="flex-shrink-0">
+                        <!-- Gambar 4 -->
+                        <div
+                            class="bg-[url('/img/g2-4.png')] h-[175px] w-[118px] md:h-[418px] md:w-[283px] bg-contain bg-no-repeat bg-center text-white rounded-md md:rounded-xl">
+                            <div class="flex flex-row h-10 justify-between text-white w-full mt-2 items-center m">
+                                <h2
+                                    class="z-50 mx-4 mt-4 font-bold text-xs mb-2 bg-blue-900 px-2 py-2 rounded-xl justify-center md:text-md md:py-1">
+                                    Episode Baru</h2>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Gambar 5 -->
-                    <div class="flex flex-row bg-[url('/img/g2-5.png')] rounded-xl w-1/5 h-[410px] bg-contain bg-no-repeat bg-center text-white">
-                        <div class="flex flex-row h-10 justify-between text-white w-full mt-2 items-center">
-                            <h2 class="z-50 mx-4 font-bold text-md mb-2 bg-blue-900 px-2 pb-1 rounded-xl justify-center">Episode Baru</h2>
+                    <div class="flex-shrink-0">
+                        <!-- Gambar 5 -->
+                        <div
+                            class="bg-[url('/img/g2-5.png')] h-[175px] w-[118px] md:h-[418px] md:w-[283px] bg-contain bg-no-repeat bg-center text-white rounded-md md:rounded-xl">
+
                         </div>
                     </div>
+
 
                 </div>
             </div>
@@ -218,60 +296,89 @@
     | FILM TRENDING
     |--------------------------------------------------------------------------
     -->
-    <div class="container justify-center mx-auto py-10 space-y-8 relative">
-        <h1 class="text-3xl font-bold text-white">Film Trending</h1>
-
-        <div class="w-full h-[365px] relative">
-
+    <div
+        class="container justify-center mx-auto py-10 pl-4 space-y-4 relative overflow-x-auto overflow-y-hidden md:h-[530px]">
+        <h1 class="text-2xl font-bold text-white md:text-3xl">Film Trending</h1>
+        <div class="w-full h-[162px] relative">
             <!-- JS -->
-            <div class="flex flex-row w-full absolute top-[40%]" style="height: 365px;">
+            <div class="flex flex-row w-full absolute h-[162px] top-[40%] md:top-[110%]">
                 <div class="flex w-[50%] h-14">
                     <!-- Arrow Left -->
-                    <img class="bg-[#2F3334] float-left border-[#E7E3FC3B] border-2 rounded-full" src="/img//arrow-left.png" alt="">
+                    <img class="bg-[#2F3334] float-left border-[#E7E3FC3B] border-2 rounded-full"
+                        src="/img//arrow-left.png" alt="">
                 </div>
                 <div class="flex w-[50%] h-14 justify-end">
                     <!-- Arrow Right -->
-                    <img class="bg-[#2F3334] border-[#E7E3FC3B] border-2 rounded-full" src="/img/arrow-right.png" alt="">
+                    <img class="bg-[#2F3334] border-[#E7E3FC3B] border-2 rounded-full" src="/img/arrow-right.png"
+                        alt="">
                 </div>
             </div>
-
             <!-- Card Wrapper -->
-            <div class="flex flex-row overflow-x-auto space-x-3">
+            <div class="flex overflow-x-auto w-full">
 
-                
-                <div class="card flex flex-row w-full space-x-10">
-                    <!-- Gambar 1 -->
-                     <div class="flex flex-row bg-[url('/img/g3-1.png')] h-[365px] bg-contain bg-no-repeat bg-center w-full text-white">
-                        <div class="flex flex-row h-10 justify-end px-3 text-white w-full mt-2 items-center">
-                            <h2 class="z-50 mx-4 h-14 font-bold text-md mb-2 bg-red-700 px-2 pb-1 rounded-xl justify-center">Top<br>10</h2>
+                <div class="flex flex-row space-x-4">
+                    <div class="flex-shrink-0">
+                        <!-- Gambar 1 -->
+                        <div
+                            class="bg-[url('/img/g3-1.png')] h-[175px] w-[118px] md:h-[418px] md:w-[283px] bg-contain bg-no-repeat bg-center text-white rounded-md md:rounded-xl">
+                            <div class="flex flex-row h-10 justify-end px-3 text-white w-full items-center">
+                                <h2
+                                    class="z-50 font-bold text-xs mb-2 bg-red-700 px-2 py-2 mt-4 rounded-tr-md rounded-bl-md md:h-14 md:w-9 md:text-md">
+                                    Top<br>10
+                                </h2>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Gambar 2-->
-                    <div class="flex flex-row bg-[url('/img/g3-2.png')] h-[365px] bg-contain bg-no-repeat bg-center w-full text-white">
-                        <div class="flex flex-row h-10 justify-end px-3 text-white w-full mt-2 items-center">
-                            <h2 class="z-50 mx-4 h-14 font-bold text-md mb-2 bg-red-700 px-2 pb-1 rounded-xl justify-center">Top<br>10</h2>
+                    <div class="flex-shrink-0">
+                        <!-- Gambar 2 -->
+                        <div
+                            class="bg-[url('/img/g3-2.png')] h-[175px] w-[118px] md:h-[418px] md:w-[283px] bg-contain bg-no-repeat bg-center text-white rounded-md md:rounded-xl">
+                            <div class="flex flex-row h-10 justify-end px-3 text-white w-full items-center">
+                                <h2
+                                    class="z-50 font-bold text-xs mb-2 bg-red-700 px-2 py-2 mt-4 rounded-tr-md rounded-bl-md md:h-14 md:w-9 md:text-md">
+                                    Top<br>10
+                                </h2>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Gambar 3 -->
-                    <div class="flex flex-row bg-[url('/img/g3-3.png')] h-[365px] bg-contain bg-no-repeat bg-center w-full text-white">
-                        <div class="flex flex-row h-10 justify-end px-3 text-white w-full mt-2 items-center">
-                            <h2 class="z-50 mx-4 h-14 font-bold text-md mb-2 bg-red-700 px-2 pb-1 rounded-xl justify-center">Top<br>10</h2>
+                    <div class="flex-shrink-0">
+                        <!-- Gambar 3 -->
+                        <div
+                            class="bg-[url('/img/g3-3.png')] h-[175px] w-[118px] md:h-[418px] md:w-[283px] bg-contain bg-no-repeat bg-center text-white rounded-md md:rounded-xl">
+                            <div class="flex flex-row h-10 justify-end px-3 text-white w-full items-center">
+                                <h2
+                                    class="z-50 font-bold text-xs mb-2 bg-red-700 px-2 py-2 mt-4 rounded-tr-md rounded-bl-md md:h-14 md:w-9 md:text-md">
+                                    Top<br>10
+                                </h2>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Gambar 4 -->
-                    <div class="flex flex-row bg-[url('/img/g3-4.png')] h-[365px] bg-contain bg-no-repeat bg-center w-full text-white">
-                        <div class="flex flex-row h-10 justify-end px-3 text-white w-full mt-2 items-center">
-                            <h2 class="z-50 mx-4 h-14 font-bold text-md mb-2 bg-red-700 px-2 pb-1 rounded-xl justify-center">Top<br>10</h2>
+                    <div class="flex-shrink-0">
+                        <!-- Gambar 4 -->
+                        <div
+                            class="bg-[url('/img/g3-4.png')] h-[175px] w-[118px] md:h-[418px] md:w-[283px] bg-contain bg-no-repeat bg-center text-white rounded-md md:rounded-xl">
+                            <div class="flex flex-row h-10 justify-end px-3 text-white w-full items-center">
+                                <h2
+                                    class="z-50 font-bold text-xs mb-2 bg-red-700 px-2 py-2 mt-4 rounded-tr-md rounded-bl-md md:h-14 md:w-9 md:text-md">
+                                    Top<br>10
+                                </h2>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Gambar 5 -->
-                    <div class="flex flex-row bg-[url('/img/g3-5.png')] h-[365px] bg-contain bg-no-repeat bg-center w-full text-white">
-                        <div class="flex flex-row h-10 justify-end px-3 text-white w-full mt-2 items-center">
-                            <h2 class="z-50 mx-4 h-14 font-bold text-md mb-2 bg-red-700 px-2 pb-1 rounded-xl justify-center">Top<br>10</h2>
+                    <div class="flex-shrink-0">
+                        <!-- Gambar 5 -->
+                        <div
+                            class="bg-[url('/img/g3-5.png')] h-[175px] w-[118px] md:h-[418px] md:w-[283px] bg-contain bg-no-repeat bg-center text-white rounded-md md:rounded-xl">
+                            <div class="flex flex-row h-10 justify-end px-3 text-white w-full items-center">
+                                <h2
+                                    class="z-50 font-bold text-xs mb-2 bg-red-700 px-2 py-2 mt-4 rounded-tr-md rounded-bl-md md:h-14 md:w-9 md:text-md">
+                                    Top<br>10
+                                </h2>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -284,60 +391,87 @@
     | RILIS BARU
     |--------------------------------------------------------------------------
     -->
-    <div class="container justify-center mx-auto py-10 space-y-8 relative">
-        <h1 class="text-3xl font-bold text-white">Rilis Baru</h1>
-
-        <div class="w-full h-[365px] relative">
-
+    <div
+        class="container justify-center mx-auto py-10 pl-4 space-y-4 relative overflow-x-auto overflow-y-hidden md:h-[530px]">
+        <h1 class="text-2xl font-bold text-white md:text-3xl">Rilis Baru</h1>
+        <div class="w-full h-[162px] relative">
             <!-- JS -->
-            <div class="flex flex-row w-full absolute top-[40%]" style="height: 365px;">
+            <div class="flex flex-row w-full absolute h-[162px] top-[30%]">
                 <div class="flex w-[50%] h-14">
                     <!-- Arrow Left -->
-                    <img class="bg-[#2F3334] float-left border-[#E7E3FC3B] border-2 rounded-full" src="/img//arrow-left.png" alt="">
+                    <img class="bg-[#2F3334] float-left border-[#E7E3FC3B] border-2 rounded-full"
+                        src="/img//arrow-left.png" alt="">
                 </div>
                 <div class="flex w-[50%] h-14 justify-end">
                     <!-- Arrow Right -->
-                    <img class="bg-[#2F3334] border-[#E7E3FC3B] border-2 rounded-full" src="/img/arrow-right.png" alt="">
+                    <img class="bg-[#2F3334] border-[#E7E3FC3B] border-2 rounded-full" src="/img/arrow-right.png"
+                        alt="">
                 </div>
             </div>
-
             <!-- Card Wrapper -->
-            <div class="flex flex-row overflow-x-auto space-x-3">
+            <div class="flex overflow-x-auto w-full">
 
-                
-                <div class="card flex flex-row w-full space-x-10">
-                    <!-- Gambar 1 -->
-                     <div class="flex flex-row bg-[url('/img/g4-1.png')] h-[365px] bg-contain bg-no-repeat bg-center w-full text-white">
-                        <div class="flex flex-row h-10 justify-end px-3 text-white w-full mt-2 items-center">
-                            <h2 class="z-50 mx-4 h-14 font-bold text-md mb-2 bg-red-700 px-2 pb-1 rounded-xl justify-center">Top<br>10</h2>
+                <div class="flex flex-row space-x-4">
+                    <div class="flex-shrink-0">
+                        <!-- Gambar 1 -->
+                        <div
+                            class="bg-[url('/img/g4-1.png')] h-[175px] w-[118px] md:h-[418px] md:w-[283px] bg-contain bg-no-repeat bg-center text-white rounded-md md:rounded-xl">
+                            <div class="flex flex-row h-10 justify-end px-3 text-white w-full items-center">
+                                <h2
+                                    class="z-50 font-bold text-xs mb-2 bg-red-700 px-2 py-2 mt-4 rounded-tr-md rounded-bl-md md:h-14 md:w-9 md:text-md">
+                                    Top<br>10
+                                </h2>
+                            </div>
                         </div>
                     </div>
 
-                   <!-- Gambar 2 -->
-                    <div class="flex flex-row bg-[url('/img/g4-2.png')] h-[365px] bg-contain bg-no-repeat bg-center w-full text-white">
-                        <div class="flex flex-row h-10 justify-between text-white w-full mt-2 items-center">
-                            <h2 class="z-50 mx-4 font-bold text-md mb-2 bg-blue-900 px-2 pb-1 rounded-xl justify-center">Episode Baru</h2>
+                    <div class="flex-shrink-0">
+                        <!-- Gambar 2 -->
+                        <div
+                            class="bg-[url('/img/g4-2.png')] h-[175px] w-[118px] md:h-[418px] md:w-[283px] bg-contain bg-no-repeat bg-center text-white rounded-md md:rounded-xl">
+                            <div class="flex flex-row h-10 justify-between text-white w-full items-center m">
+                                <h2
+                                    class="z-50 mx-4 mt-4 font-bold text-xs mb-2 bg-blue-900 px-2 py-2 rounded-xl justify-center md:text-md md:py-1">
+                                    Episode Baru</h2>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Gambar 3 -->
-                     <div class="flex flex-row bg-[url('/img/g4-3.png')] h-[365px] bg-contain bg-no-repeat bg-center w-full text-white">
-                        <div class="flex flex-row h-10 justify-end px-3 text-white w-full mt-2 items-center">
-                            <h2 class="z-50 mx-4 h-14 font-bold text-md mb-2 bg-red-700 px-2 pb-1 rounded-xl justify-center">Top<br>10</h2>
+                    <div class="flex-shrink-0">
+                        <!-- Gambar 3 -->
+                        <div
+                            class="bg-[url('/img/g4-3.png')] h-[175px] w-[118px] md:h-[418px] md:w-[283px] bg-contain bg-no-repeat bg-center text-white rounded-md md:rounded-xl">
+                            <div class="flex flex-row h-10 justify-end px-3 text-white w-full items-center">
+                                <h2
+                                    class="z-50 font-bold text-xs mb-2 bg-red-700 px-2 py-2 mt-4 rounded-tr-md rounded-bl-md md:h-14 md:w-9 md:text-md">
+                                    Top<br>10
+                                </h2>
+                            </div>
                         </div>
                     </div>
 
-                   <!-- Gambar 4 -->
-                    <div class="flex flex-row bg-[url('/img/g4-4.png')] h-[365px] bg-contain bg-no-repeat bg-center w-full text-white">
-                        <div class="flex flex-row h-10 justify-between text-white w-full mt-2 items-center">
-                            <h2 class="z-50 mx-4 font-bold text-md mb-2 bg-blue-900 px-2 pb-1 rounded-xl justify-center">Episode Baru</h2>
+                    <div class="flex-shrink-0">
+                        <!-- Gambar 4 -->
+                        <div
+                            class="bg-[url('/img/g4-4.png')] h-[175px] w-[118px] md:h-[418px] md:w-[283px] bg-contain bg-no-repeat bg-center text-white rounded-md md:rounded-xl">
+                            <div class="flex flex-row h-10 justify-between text-white w-full items-center m">
+                                <h2
+                                    class="z-50 mx-4 mt-4 font-bold text-xs mb-2 bg-blue-900 px-2 py-2 rounded-xl justify-center md:text-md md:py-1">
+                                    Episode Baru</h2>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Gambar 5 -->
-                     <div class="flex flex-row bg-[url('/img/g4-5.png')] h-[365px] bg-contain bg-no-repeat bg-center w-full text-white">
-                        <div class="flex flex-row h-10 justify-end px-3 text-white w-full mt-2 items-center">
-                            <h2 class="z-50 mx-4 h-14 font-bold text-md mb-2 bg-red-700 px-2 pb-1 rounded-xl justify-center">Top<br>10</h2>
+                    <div class="flex-shrink-0">
+                        <!-- Gambar 5 -->
+                        <div
+                            class="bg-[url('/img/g4-5.png')] h-[175px] w-[118px] md:h-[418px] md:w-[283px] bg-contain bg-no-repeat bg-center text-white rounded-md md:rounded-xl">
+                            <div class="flex flex-row h-10 justify-end px-3 text-white w-full items-center">
+                                <h2
+                                    class="z-50 font-bold text-xs mb-2 bg-red-700 px-2 py-2 mt-4 rounded-tr-md rounded-bl-md md:h-14 md:w-9 md:text-md">
+                                    Top<br>10
+                                </h2>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -345,64 +479,76 @@
         </div>
     </div>
 
-
     <!--  
     |--------------------------------------------------------------------------
     | FOOTER
     |--------------------------------------------------------------------------
     -->
-    <div class="border-t-2 border-[rgba(156,163,175,0.2)] py-10 mt-14 justify-between item-center w-full">
-     <div class="container mx-auto flex flex-row w-full">
-        <!-- Logo -->
-        <div class="flex flex-col w-1/4 space-y-4">
-            <img src="/img/logo.png" alt="" srcset="" class="w-32 h-10">
-            <h2 class="text-white">@2023 Chill All Rights Reserved.</h2>
-        </div>
-        <!-- Detail -->
-        <div class="flex flex-col w-2/4">
-            <!-- Genre -->
-            <div class="space-y-3">
-                <h1 class="text-white font-bold">Genre</h1>
+    <div class="border-t-2 border-[rgba(156,163,175,0.2)] px-4 py-10 mt-14 justify-between item-center w-full">
+        <div class="container mx-auto flex flex-col md:flex-row flex-wrap w-full space-y-4">
+            <!-- Logo -->
+            <div class="flex flex-col w-full space-y-2 md:w-1/4 md:space-y-4">
+                <img src="/img/logo.png" alt="" srcset="" class="w-32 h-10">
+                <h2 class="text-white">@2023 Chill All Rights Reserved.</h2>
+            </div>
+            <!-- Detail -->
+            <div class="flex flex-col w-full md:w-2/4">
+                <!-- Genre -->
+                <div class="space-y-3">
+                    <div class="flex flex-row item-center justify-between">
+                        <h1 class="text-white font-bold text-xl">Genre</h1>
+                        <button class="block md:hidden"><img class="w-3" src="/img/arrow-enter.png" alt=""></button>
+                    </div>
 
-                <!-- Dropdown Genre -->
-                <div class="flex flex-row space-x-6 text-white opacity-70">
-                    <div class="space-y-3">
-                        <h2 class=""><a href="">Aksi</a></h2>
-                        <h2 class=""><a href="">Anak-anak</a></h2>
-                        <h2 class=""><a href="">Anime</a></h2>
-                        <h2 class=""><a href="">Britania</a></h2>
-                    </div>
-                    <div class="space-y-3">
-                        <h2 class=""><a href="">Drana</a></h2>
-                        <h2 class=""><a href="">Fantasi Ilmiah & Fantasi</a></h2>
-                        <h2 class=""><a href="">Kejahatan</a></h2>
-                        <h2 class=""><a href="">KDrama</a></h2>
-                    </div>
-                    <div class="space-y-3">
-                        <h2 class=""><a href="">Komedi</a></h2>
-                        <h2 class=""><a href="">Petualangan</a></h2>
-                        <h2 class=""><a href="">Perang</a></h2>
-                        <h2 class=""><a href="">Romantis</a></h2>
-                    </div>
-                    <div class="space-y-3">
-                        <h2 class=""><a href="">Sains & Alam</a></h2>
-                        <h2 class=""><a href="">Thriller</a></h2>
+                    <!-- Dropdown Genre -->
+                    <div
+                        class="flex flex-row flex-wrap text-white opacity-70 hidden md:space-x-6 md:block md:flex md:flex-row">
+                        <div class="space-y-3">
+                            <h2 class=""><a href="">Aksi</a></h2>
+                            <h2 class=""><a href="">Anak-anak</a></h2>
+                            <h2 class=""><a href="">Anime</a></h2>
+                            <h2 class=""><a href="">Britania</a></h2>
+                        </div>
+                        <div class="space-y-3">
+                            <h2 class=""><a href="">Drama</a></h2>
+                            <h2 class=""><a href="">Fantasi Ilmiah & Fantasi</a></h2>
+                            <h2 class=""><a href="">Kejahatan</a></h2>
+                            <h2 class=""><a href="">KDrama</a></h2>
+                        </div>
+                        <div class="space-y-3">
+                            <h2 class=""><a href="">Komedi</a></h2>
+                            <h2 class=""><a href="">Petualangan</a></h2>
+                            <h2 class=""><a href="">Perang</a></h2>
+                            <h2 class=""><a href="">Romantis</a></h2>
+                        </div>
+                        <div class="space-y-3">
+                            <h2 class=""><a href="">Sains & Alam</a></h2>
+                            <h2 class=""><a href="">Thriller</a></h2>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>    
-                    <!-- Bantuan -->
-            <div class="w-1/4 h-auto space-y-3">
-                <h1 class="text-white font-bold">Bantuan</h1>
-                <div class="space-y-3 text-white opacity-70">
+            <!-- Bantuan -->
+            <div class="h-auto space-y-3 w-full md:w-1/4">
+                <div class="flex flex-row item-center justify-between">
+                    <h1 class="text-white font-bold text-xl">Bantuan</h1>
+                    <button class="block md:hidden"><img class="w-3" src="/img/arrow-enter.png" alt=""></button>
+                </div>
+
+
+
+                <div class="space-y-3 text-white opacity-70 hidden md:block">
                     <h2 class=""><a href="">FAQ</a></h2>
                     <h2 class=""><a href="">Kontak Kami</a></h2>
                     <h2 class=""><a href="">Privasi</a></h2>
                     <h2 class=""><a href="">Syarat & Ketentuan</a></h2>
                 </div>
-            </div>    
-     </div>
-     </div>
+            </div>
+        </div>
+    </div>
+
+
 
 </body>
-</html> 
+
+</html>
